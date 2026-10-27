@@ -1,0 +1,14 @@
+class Solution {
+public:
+    bool hasDuplicate(vector<int>& nums) {
+        std::set<int> s = {};
+        for (auto n: nums) {
+            if (s.find(n) != s.end()) {
+                return true;
+            } else {
+                s.insert(n);
+            }
+        } 
+        return false;
+    }
+};
